@@ -6,227 +6,44 @@ html {
   height: 100vh;
 }
 
-body {
+
+
+.container {
+  width: 100%;
+  height: 100vh;  
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
 }
 
-article {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  width: 60em;
-  height: 43.2em;
-  border-radius: 1rem;
-  font-weight: bold;
-  background-color:rgb(117, 117, 117);
-  box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
-  transition: .25s;
-  -webkit-mask-image: url(../assets/wolk.png);
-  -webkit-mask-image: url(../assets/wolk2.png);
-  mask-image: url(../assets/wolk.png);
-  -webkit-mask-image: url(../assets/testwolk.png);
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-}
-
-article:hover {
-  background-color: rgb(69, 137, 206);
-  transition: 1s ease-in-out;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-em {
-    text-decoration: underline;
-}
-
-h1 {
-  margin: 2rem 0 1rem;
-  color: black;
-  font-size: 60px;
-  text-shadow: 2px 2px 4px black;
-}
-
-button {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: .25rem;
-  border: none;
-  border-radius: 50%;
-  background: white;
-  transform: scale(.8);
-  transition: .25s;
-}
-button:focus {
-  outline: none;
-  background: white;
-}
-button:focus svg {
-  stroke: black;
-}
-
-svg {
-  position: absolute;
-  top: calc(1.25rem - 12px);
-  left: calc(1.25rem - 12px);
-  stroke: black;
-  transition-delay: .25s;
-}
-button svg:nth-of-type(2) {
-  opacity: 0;
-  transition-delay: 0ms;
-}
-
-img {
-  position: relative;
-  top: 4rem;
-  width: 15em;
-  height: auto;
-  border: 5px solid black;
-  border-radius: 10em;
-  box-shadow: 0 0 2px 2px rgba(0,0,0,.8);
-  transition: .25s .15s;
-}
-
-dl {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    "html-dd css-dd js-dd"
-    "html-dt css-dt js-dt"
-    ;
-  justify-items: center;
-  align-items: start;
-  width: 100%;
-  max-width: 1000px;
-  margin-top: -3rem;
-  margin-bottom: 0;
-  padding: 5rem 3em 3rem 4em; 
+.profilecard {
+  width: 90%;
+  max-width: 440px;
+  color: #fff;
   text-align: center;
-  background: rgb(255,255,255);
+  padding: 50px 35px;
+  /* border: 1px solid black; */
+  background: rgba(255, 255, 255, .1);
+  border-radius: 16px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
 }
 
-dt {
-  margin-top: .25rem;
-  padding-top: .25rem;
-  border-top: 1px solid rgba(0,0,0,0.3);
-  font-weight: bold;
-}
-dt:nth-of-type(1) {
-  grid-area: html-dt;
-}
-dt:nth-of-type(2) {
-  grid-area: css-dt;
-  transform: translateY(1rem);
-}
-dt:nth-of-type(3) {
-  grid-area: js-dt;
-}
-
-dd {
-  margin: 0;
-  padding-left: .3rem;
-  transition: .25s .3s;
-}
-dd:nth-of-type(2){  
-  transform: translateY(1rem);
-}
-
-p { 
-  margin: 0;
-}
-
-article > p {
-  width: 100%;
-  margin-top: 0;
-  padding: 3rem 2rem;
-  border-radius: 0 0 1rem 1rem;
-  text-align: center;
-}
-
-/* expand content */
-body.expand {
-  font-size: 1.15em;
-}
-
-body.expand article {
-  width: 60vw;
-  max-width: 60vw;
-}
-
-body.expand button svg:first-of-type {
-  opacity: 0;
-  transition-delay: 0ms;
-}
-
-body.expand button svg:nth-of-type(2) {
-  opacity: 1;
-  transition-delay: .25s;
-}
-
-body.expand dd {
-  font-size: 1.75em;
-}
-
-body.expand img {
-  width: 15em;
-}
-
-img:hover {
-  border: 10px solid white;
+.bg-splash {
+  position: absolute;
+  
+  background: rgb(187,95,240);
+  background: linear-gradient(138deg, rgb(197, 123, 240) 28%, #60bbf0 100%); 
+  border-radius: 100% 55% 50% 50%;
+  filter: blur(50px);
+  height: 80vh;
+  width: 80vh;
+  z-index: -10;
 }
 
 @media (prefers-color-scheme: dark) {
 
-  article:hover {
-    background-color: #3e3e3e;
-    transition: 1s ease-in-out;
-  }
-
-  img:hover {
-    border: 10px solid #868585;
-  }
-
-  article{
-    -webkit-mask-image: url(../assets/maan.png);
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-    width: 51.2m;
-    height: 51.2em;
-  }
-
-  dl {
-    background-color: #7e7d7d;
-  }
-
-  dt {
-    padding: 2rem 7em 5rem 5em; 
-    text-align: center;
-  }
-
   body{
     background-color: #303030;
     color: #999;
-  }
-
-  h1{
-    color: #999;
-
   }
 }
