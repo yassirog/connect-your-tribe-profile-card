@@ -1,13 +1,30 @@
 * {
-  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
   height: 100vh;
 }
 
+.bg-splash {
+  overflow: hidden;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: rgb(187,95,240);
+  background: linear-gradient(160deg, rgb(197, 123, 240) 28%, #60bbf0 100%); 
+  border-radius: 100% 55% 50% 50%;
+  filter: blur(50px);
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+}
 
-
+/* All sections */
 .container {
   width: 100%;
   height: 100vh;  
@@ -16,28 +33,87 @@ html {
   align-items: center;
 }
 
-.profilecard {
-  width: 90%;
-  max-width: 440px;
+.profile-card {
+  width: 500px;  
   color: #fff;
   text-align: center;
   padding: 50px 35px;
-  /* border: 1px solid black; */
+  border: 0 0 2px solid black;
   background: rgba(255, 255, 255, .1);
   border-radius: 16px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
 }
 
-.bg-splash {
-  position: absolute;
-  
-  background: rgb(187,95,240);
-  background: linear-gradient(138deg, rgb(197, 123, 240) 28%, #60bbf0 100%); 
-  border-radius: 100% 55% 50% 50%;
-  filter: blur(50px);
-  height: 80vh;
-  width: 80vh;
-  z-index: -10;
+.card-header {
+  margin-bottom: 2em;
+
+  & .navbar-ul {
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-bottom: 2em;
+    margin-top: 2em;
+
+    & li:hover {
+      border-bottom: 0.1em solid  #999;
+    }
+  }
+}
+
+  img { 
+      width: 12em;
+      height: auto;
+      border-radius: 10em;
+      transition: .25s .15s;
+  }
+
+
+.card-body {
+  text-align: start;
+}
+
+.card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullinfo {
+  text-align: start;
+  display: none;
+}
+
+.fullinfo-list {
+  list-style-type: none;
+}
+
+li {
+  font-weight: 600;
+}
+
+span {
+  font-weight: 400;
+}
+
+/* Buttons */
+.github-button {
+  background-color: #fff;
+  margin-top: 2em;
+  padding: 1em;
+  width: 20em;
+  border: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.github-button:hover {
+  border-bottom: 3px solid #999 ;
 }
 
 @media (prefers-color-scheme: dark) {

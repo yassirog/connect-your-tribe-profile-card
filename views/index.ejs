@@ -2,14 +2,41 @@
 <div class="center">
   <div class="bg-splash"></div>
 </div>
-  <div class="container">
-    <div class="profilecard">
+<div class="container">
+  <div class="profile-card">
+    <div class="card-header">
+      <img src="assets/outfitalleen.png" alt="profile picture of yassir"/>
       <h2><%- data.name %> <%- data.surname %></h2>
-      <placeholder>kaas</placeholder>
-      <button href="mailto:yassircode@gmail.com">E-mail</button>
-      <button>GitHub</button>
+      <ul class="navbar-ul">
+        <li class="nav-item" id="about-tab">About</li>
+        <li class="nav-item" id="fullinfo-tab">Full Info</li>
+      </ul>
     </div>
+    <div class="about">
+      <div class="card-body">
+        <h3>Biografie:</h3>
+        <p><%- data.bio %></p>
+      </div>
+      <div class="card-foot">
+        <button class="github-button" href="https://github.com/yassirog">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          Github</button>
+      </div>
+    </div>
+    <div class="fullinfo" id="fullinfo-card" style="display: none;"> 
+      <h2>Full Info</h2>
+      <div>
+        <ul class="fullinfo-list">
+          <li>Fullname: <span><%- data.name %> <%- data.surname %></span></li>
+          <li>Nickname: <span><%- data.nickname %></span></li>
+          <li>Github handle: <span><%- data.github_handle %></span></li>
+          <li>Role: <span><%- data.role %></span></li>
+          <li>Email: <span><%- data.email %></span></li>
+          <li>Phone: <span><%- data.phone_number %></span></li>
+          <li>Squad: <span>1F</span></li>
+        </ul>
+      </div>
     </div>
   </div>
-
+</div>
 <%- include('./partials/foot') %>
