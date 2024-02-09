@@ -110,11 +110,14 @@ span {
   border: 2px;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .github-button:hover {
   border-bottom: 3px solid #999 ;
 }
+
+
 
 @media (prefers-color-scheme: dark) {
 

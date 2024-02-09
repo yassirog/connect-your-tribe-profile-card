@@ -1,4 +1,4 @@
-// Leuke dingetje van insta
+// Funny thing of off insta
 let docTitle = document.title;
 window.addEventListener("blur", () =>{
   document.title = "Come back :(";
